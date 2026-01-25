@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPMS Hospital</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="add_patient.css">
+</head>
+<body>
+   <div class="background">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1153&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+             alt="Hospital Background" 
+             class="b_img">
+             <div class="styling"></div> 
+</div>
+<div class="nav_bar">
+        
+    <div class="logo">
+        <h2><em>HPMS</em></h2>
+    </div>
+
+    <div class="nav">
+            
+        <a href="menu.html" class="nav_btn">Menu</a>
+
+        <div class="drop">
+            <button class="nav_cont">Patients</button>
+            <div class="drop_cont">
+                <a href="add_patient.html">Register New</a>
+                <a href="admit.html">Admit Patient</a>
+                <a href="discharge.html">Discharge</a>
+                <a href="view_patients.html">View Records</a>
+            </div>
+        </div>
+
+        <div class="drop">
+            <button class="nav_cont">Medical</button>
+            <div class="drop_cont">
+                <a href="add_doc.html">Register New</a>
+                <a href="book_appointment.html">Book Appointment</a>
+                <a href="doctor_schedule.html">Doctor Schedule</a>
+            </div>
+        </div>
+
+        <div class="drop">
+            <button class="nav_cont">Facilities</button>
+            <div class="drop_cont">
+                <a href="manage_depts.html">Departments</a>
+                <a href="manage_wards.html">Wards</a>
+                <a href="manage_beds.html">Beds</a>
+            </div>
+        </div>
+
+        <div class="drop">
+            <button class="nav_cont">Billing</button>
+            <div class="drop_cont">
+                <a href="billing.html">Generate Bill</a>
+                <a href="view_bills.html">Bill History</a>
+            </div>
+        </div>
+
+    </div> 
+</div> 
+    
+
+ 
+
+
+
+
+
+
+    
+<div class="p_register">
+    <div class="p_box">
+        <h2>Patient Registration</h2>
+        <form action="save_patient.php" method="POST">
+            
+            <div class="p_row">
+                <div class="p_group">
+                    <label>First Name</label>
+                    <input id="fname" type="text" name="first_name" required>
+                </div>
+                <div class="p_group">
+                    <label>Last Name</label>
+                    <input id="lname" type="text" name="last_name" required>
+                </div>
+            </div>
+
+            <div class="p_row2">
+                <div class="p_group">
+                    <label>Birth Date</label>
+                    <input id="dobid" type="date" name="dob" required>
+                </div>
+                <div class="p_group">
+                    <label>Gender</label>
+                    <select name="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="p_group">
+                    <label>Blood Group</label>
+                    <select name="blood_group" required>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+
+
+
+
+                <div class="p_row">
+                    <div class="p_group" id="phone_box">
+                        <label>Phone Number(s)</label>
+                        <div class="phone_row">
+                            <input type="text" name="p_numbers[]" required placeholder="Enter number">
+                            <button type="button" onclick="add_phone()">+</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+           
+
+            <div class="p_add">
+                <div class="p_group" >
+                    <label>No.</label>
+                    <input type="text" name="add_number">
+                </div>
+                <div class="p_group">
+                    <label>Street</label>
+                    <input type="text" name="street">
+                </div>
+                <div class="p_group">
+                    <label>City</label>
+                    <input type="text" name="city">
+                </div>
+            </div>
+
+            <button type="submit" class="submit_btn" onclick="p_submit()">Complete Registration</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

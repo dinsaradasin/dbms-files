@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPMS Hospital</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="add_doc.css">
+</head>
+<body>
+    <div class="background">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1153&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+             alt="Hospital Background" 
+             class="b_img">
+             <div class="styling"></div> 
+</div>
+
+
+
+
+<div class="nav_bar">
+        
+    <div class="logo">
+        <h2><em>HPMS</em></h2>
+    </div>
+
+    <div class="nav">
+            
+        <a href="menu.html" class="nav_btn">Menu</a>
+
+        <div class="drop">
+            <button class="nav_cont">Patients</button>
+            <div class="drop_cont">
+                <a href="add_patient.html">Register New</a>
+                <a href="admit.html">Admit Patient</a>
+                <a href="discharge.html">Discharge</a>
+                <a href="view_patients.html">View Records</a>
+            </div>
+        </div>
+
+        <div class="drop">
+            <button class="nav_cont">Medical</button>
+            <div class="drop_cont">
+                <a href="add_doc.html">Register New</a>
+                <a href="book_appointment.html">Book Appointment</a>
+                <a href="doctor_schedule.html">Doctor Schedule</a>
+            </div>
+        </div>
+
+        <div class="drop">
+            <button class="nav_cont">Facilities</button>
+            <div class="drop_cont">
+                <a href="manage_depts.html">Departments</a>
+                <a href="manage_wards.html">Wards</a>
+                <a href="manage_beds.html">Beds</a>
+            </div>
+        </div>
+
+        <div class="drop">
+            <button class="nav_cont">Billing</button>
+            <div class="drop_cont">
+                <a href="billing.html">Generate Bill</a>
+                <a href="view_bills.html">Bill History</a>
+            </div>
+        </div>
+
+    </div> 
+</div> 
+
+
+
+
+
+<div class="d_register">
+    <div class="d_box">
+        <h2>Doctor Registration</h2>
+        <form action="save_doc.php" method="POST">
+            
+            <div class="d_row">
+                <div class="d_group">
+                    <label>First Name</label>
+                    <input type="text" name="first_name" required>
+                </div>
+                <div class="d_group">
+                    <label>Last Name</label>
+                    <input type="text" name="last_name" required>
+                </div>
+            </div>
+
+            <div class="d_row">
+                <div class="d_group">
+                    <label>E-mail</label>
+                    <input type="email" name="e_mail" required>
+                </div>
+                <div class="d_group">
+                    <label>Specialization</label>
+                    <input type="text" name="specialization" required>
+                </div>
+            </div>
+
+            <div class="d_row">
+                <div class="d_group">
+                    <label>Department ID</label>
+                    <input type="number" name="dept_id" required placeholder="Enter Dept ID">
+                </div>
+                <div class="d_group" id="phone_box">
+                    <label>Phone Number(s)</label>
+                    <div class="phone_row">
+                        <input type="text" name="p_numbers[]" required>
+                        <button type="button" onclick="add_phone()">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit_btn" onclick="d_submit()">Register Doctor</button>
+        </form>
+    </div>
+</div>
+
+<script src="add_doc.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,102 @@
+.d_register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 5;
+    padding: 20px;
+}
+
+
+
+.d_box {
+    background: #13b5e1;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+
+
+.d_box h2 {
+    text-align: center;
+    color: #293b6f;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #293b6f;
+}
+
+
+
+
+
+.d_row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+
+
+.d_group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+
+
+.phone_row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.phone_row input {
+    flex: 1;
+}
+
+.phone_row button {
+    background: #293b6f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 35px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+.d_group label {
+    font-weight: bold;
+    font-size: 15px;
+    color: #293b6f;
+    margin-bottom: 7px;
+}
+
+
+
+.d_group input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgb(203, 193, 193);
+}
+
+
+.submit_btn {
+    width: 100%;
+    background: #293b6f;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
