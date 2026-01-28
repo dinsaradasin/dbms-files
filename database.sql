@@ -82,7 +82,7 @@ CREATE TABLE appointment (
 
 CREATE TABLE bill (
     bill_id INT AUTO_INCREMENT PRIMARY KEY,
-    bill_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    bill_date DATETIME,
     total_amount DECIMAL(10, 2),
     bill_status VARCHAR(20) DEFAULT 'Unpaid',
     app_id INT,
