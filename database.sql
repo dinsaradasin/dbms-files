@@ -50,8 +50,8 @@ CREATE TABLE patient (
     street VARCHAR(50),     
     city VARCHAR(20),        
     ward_id INT,      
-    admission_date DATETIME, 
-    discharge_date DATETIME,
+    admission_date DATE, 
+    discharge_date DATE,
     FOREIGN KEY (person_id) REFERENCES person(person_id),
     FOREIGN KEY (ward_id) REFERENCES ward(ward_id) 
 );
